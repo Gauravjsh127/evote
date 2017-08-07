@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result Analysis</title>
+
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <script src="angular/angular.js"></script>
+    <script src="angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="scripts/main.js"></script>
+    <link rel="stylesheet" href="/style/style.css">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/scripts/highcharts.js"></script>
+    <script type="text/javascript" src="/scripts/exporting.js"></script>
+    <script type="text/javascript" src="/scripts/stackedarea.js"></script>
+    <script type="text/javascript" src="/scripts/piechart.js"></script>
+</head>
+<body>
+<div ng-controller="DropdownCtrl">
+
+    <!-- Simple dropdown -->
+    <!-- <span class="dropdown" dropdown on-toggle="toggled(open)">
+       <a href class="dropdown-toggle" dropdown-toggle>
+         Click me for a dropdown, yo!
+       </a>
+       <ul class="dropdown-menu">
+         <li ng-repeat="choice in items">
+           <a href>{{choice}}</a>
+         </li>
+       </ul>
+     </span>-->
+
+    <!-- Single button -->
+    <!--<div class="btn-group" dropdown is-open="status.isopen">
+      <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+        Button dropdown <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+      </ul>
+    </div>-->
+
+
+    <ul class="nav nav-tabs nav-pills nav-justified">
+        <li role="presentation"><a href="#">Personal Information</a></li>
+        <li role="presentation" class="active"><a href="risktolerance.html">Investment Information</a></li>
+        <li role="presentation"><a href="#">Financial Planing</a></li>
+        <li role="presentation"><a href="#">Dashboard</a></li>
+    </ul>
+    <ul class="nav nav-pills nav-justified">
+        <li role="presentation"><a href="#">Investment Goals</a></li>
+        <li role="presentation"><a href="#">Risk Tolerance</a></li>
+        <li role="presentation"><a href="#">Existing Investments</a></li>
+        <li role="presentation" class="active"><a href="#">Result Analysis</a></li>
+    </ul>
+
+
+
+
+    <div class="container">
+        <h1>Our Advice</h1>
+
+    </div>
+
+
+</div>
+
+
+<div class="row">
+    <div class="col-sm-2">
+        Risk bar
+    </div>
+
+    <div class="col-sm-8 spacer chart" id="stackedarea"></div>
+    <div class="col-sm-2">
+        monthly income
+    </div>
+
+
+</div>
+
+
+<div class="row space">
+    <div class="col-sm-4" id="assetpie">
+        <h3>Column 1</h3>
+
+
+    </div>
+
+
+    <div class="col-sm-4" id="industrypie">
+        <h3>Column 2</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4" id="regionpie">
+        <h3>Column 3</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+
+</div>
+
+
+
+<form method="get" action="/Dashboard.html">
+    <button type="submit">DashBoard</button>
+</form>
+
+
+
+</body>
+</html>

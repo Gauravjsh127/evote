@@ -1,0 +1,14 @@
+{
+  "ServiceId": "com.ibm.cloudoe.orion.client.deploy",
+  "Params": {
+    "Target": {
+      "Url": "https://api.eu-gb.bluemix.net",
+      "Org": "gjoshi@de.ibm.com",
+      "Space": "dev"
+    },
+    "Name": "WealthMangement",
+    "Instrumentation": {}
+  },
+  "Path": "",
+  "Type": "Cloud Foundry"
+}

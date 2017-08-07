@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+	<script src="angular/angular.js"></script>
+	<script src="angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="scripts/main.js"></script>
+  
+</head>
+<body>
+
+    <h1>Cloudant DB GET SET DELETE TEST</h1>
+    <br />
+    <div class="container" style="color: black">
+        <h2>DB Operations:</h2>
+		<br />
+		<form class="form-horizontal" style="width: 800px">
+		
+			<div class="form-group">
+            	<label for="Db">DB Name :</label>
+	    	    <input id="Db_name" class="form-control" type='text' name='Db_name' placeholder="Db"/>
+			</div>
+			<div class="form-group">
+				<label for="id">Doc ID:</label>
+				<input id="docid" class="form-control" type='text' name='docid' placeholder="Doc ID"/>
+			</div>
+
+			<div class="form-group">
+            	<label for="key">Key:</label>
+	    	    <input id="key" class="form-control" type='text' name='key' placeholder="Input key"/>
+			</div>
+	    	<div class="form-group">
+	    		<label for="value">Value: </label>
+	    		<input id='value' class="form-control" type="text" name='value' placeholder="Value" />
+	    	</div>
+	    </form>
+
+	    <div class="buttonContainer">
+			<button class="btn btn-primary" id='db' onclick="createDB()">CreateDB</button>
+	    	<button class="btn btn-primary" id='get' onclick="getData()">Get</button>
+			<button class="btn btn-primary" id='put' onclick="PutData()">Put</button>
+			<button class="btn btn-primary" id='post' onclick="PostData()">Post</button>
+			<button class="btn btn-primary" id='delete' onclick="deleteData()">Delete</button>
+	    </div>
+		<div id='DbCreatedInfo' class="messageInfo"></div>
+		<div id='DataInsertInfo' class="messageInfo"></div>
+		<div id='DataFetchInfo' class="messageInfo"></div>
+		<div id='DataKeyInfo1' class="messageInfo"></div>
+		<div id='DataKeyInfo2' class="messageInfo"></div>
+		<div id='DataKeyInfo3' class="messageInfo"></div>
+
+		<form method="get" action="/risktolerance.html">
+			<button type="submit">Continue</button>
+		</form>
+
+	</div>
+
+
+
+    <script type="text/javascript" src="/SetGoals/scripts/getsetdata.js"></script>
+	<script type="text/javascript" src="/SetGoals/scripts/util.js"></script>
+
+
+  
+  
+</body>
+</html>
